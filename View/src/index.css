@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
+
+
+body {
+  margin: 0;
+  font-family: "Dosis", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.header-container {
+  display: flex;
+  width: 100vw;
+  height: 100px;
+  background-color: black;
+  align-content: center;
+  position: relative;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.header-title {
+  display: flex;
+  padding:0;
+  margin:0;
+  height:100%;
+  align-items: center;
+  padding-left: 20px;
+  font-family: "Protest Riot", sans-serif;
+  font-size: 100;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.wobble:hover {
+  animation: wobble 0.5s ease-in-out infinite
+}
+
+@keyframes wobble {
+  0% {
+    transform: rotate(-5deg);
+  }
+
+  /* Tilt slightly left */
+  25% {
+    transform: rotate(3deg);
+  }
+
+  /* Tilt slightly right */
+  50% {
+    transform: rotate(-3deg);
+  }
+
+  /* Tilt back slightly left */
+  75% {
+    transform: rotate(3deg);
+  }
+
+  /* Tilt back slightly right */
+  100% {
+    transform: rotate(0deg);
+  }
+
+  /* Reset to original position */
+}
+
+.header-ul {
+  margin-top: 0;
+  position: absolute;
+  right:0;
+  color: white;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height: inherit;
+  padding-right: 20px;
+}
+
+.header-links {
+  all:unset;
+  color: white;
+  margin: 10px;
+  background: linear-gradient(currentColor 0 0) 
+  bottom left/ 
+  var(--underline-width, 0%) 0.1em 
+  no-repeat;
+}
+
+.header-links:hover {
+  cursor: pointer;
+  --underline-width: 100%;
+  transition: all 0.5s ease-in-out;
+}
+
+.login-header {
+  display:flex;
+  justify-content:center;
+}
+
+.login-container {
+  display:grid;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-username {
+  display: flex;
+}
+
+.login-submit {
+  display:flex;
+  justify-content: center;
+  justify-self: center;
+  margin-top: 15px;
+  text-align: center;
+  width: 80px;
+}
+
+.um-buttons-container {
+  display: grid;
+  
+}
+.um-add-create-container {
+display: grid;
+  justify-content: center;
+}
+
+.add_user_elements {
+  align-self: center;
+  margin:5px
+}
+
+.add_create_ul {
+  display:flex;
+  justify-content: center;
+  padding:0;
+  margin:5px;
+}
+
+.um-button {
+  font-family: "Dosis", sans-serif;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.um-button:hover {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+
+.usercard-container {
+  background-color: grey;
+  height: 55px;
+  width:75vw;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  padding: 8px;
+  border: 1px solid #b7b6b6;
+  text-align: center;
+  width:150px;
+  
+}
+
+.floating-alert {
+  display: none;
+  position: fixed;
+  color:black;
+  background-color: white;
+  border: grey;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right:10px;
+  z-index: 10;
+  top: 38px;
+  left: 50%;
+  transform: translateX(-50%);
+  -moz-animation: floatingAlert ease-in 5s forwards;
+  -webkit-animation: floatingAlert ease-in 5s forwards;
+  -o-animation: floatingAlert ease-in 5s forwards;
+  animation: floatingAlert ease-in 5s forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.floating-alerts .floating-alert:last-of-type {
+  display: block;
+}
+
+@keyframes floatingAlert {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50%) scale(1.2);
+  }
+
+  9% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) scale(1);
+  }
+
+  91% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50%) scale(1.2);
+  }
+}
+
+@-webkit-keyframes floatingAlert {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50%) scale(1.2);
+  }
+
+  9% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) scale(1);
+  }
+
+  91% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50%) scale(1.2);
+  }
+}
+
+.green-light {
+  height: 20px;
+  width:66px;
+  background-color: rgb(0, 197, 0);
+  text-align: center;
+  border-radius: 9px;
+ 
+}
+.green-light:hover {
+    background-color: rgb(0, 255, 0);
+}
+
+.red-light {
+  height:20px;
+  width:66px;
+  background-color: red;
+  text-align: center;
+  border-radius: 9px;
+
+}
+.red-light:hover {
+  background-color: rgb(254, 58, 58)
+}
+
+.green-light-button {
+  height: 20px;
+  width: 20px;
+  background-color: rgb(0, 197, 0);
+  text-align: center;
+  border-radius: 50%;
+
+}
+
+.green-light-button:hover {
+  background-color: rgb(0, 255, 0);
+}
+
+.red-light-button {
+  height: 20px;
+  width: 20px;
+  background-color: red;
+  text-align: center;
+  border-radius: 50%;
+
+}
+
+.red-light-button:hover {
+  background-color: rgb(254, 58, 58)
+}
+
+/* Style The Dropdown Button */
+.dropbtn {
+  background-color: transparent;
+  color: white;
+  font-family: "Dosis", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: pointer;
+  border:0;
+
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 7px 10px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: rgb(138, 138, 138)
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #5f5f5f;
+}
+
+.centered-div {
+  position: absolute;
+  display:grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 70vw;
+  height:80vh;
+  overflow-y: auto;
+  background-color: white;
+  border: 4px solid #000000;
+  padding-bottom:10px;
+  padding-top: 10px;
+  padding-left: 100px;
+  padding-right:100px;
+}
+
+.testing {
+  display:flex;
+  margin:0px;
+  padding:0px;
+}
+
+
+.sticky-note {
+  position:relative;
+  display: block;
+  padding: 0;
+  margin: 5px;
+  height: 175px;
+  width: 200px;
+  padding-top: 3px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  /* Indicate grabbing on hover */
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    user-select: none;
+    -webkit-user-select: none;
+    background-color: white;
+    touch-action: manipulation;
+    background-size: 250px 175px;
+    background-position: 0px 0px;
+    overflow-y: auto;
+}
+
+.sticky-note:hover {
+box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+  background-position: -50px 0px;
+  transition: all 0.5s ease-in-out ;
+}
+
+.spinning-div {
+  border-radius: 50%;
+  font-weight: 500;
+  font-size: 50px;
+  margin: 150px;
+  animation: spin 5s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
