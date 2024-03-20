@@ -27,9 +27,16 @@ const public = require("./routes/public");
 const user = require("./routes/user");
 
 // Mount Routes
+app.all(/.*\%.*/, (req, res) => {
+  res.json({ code: "U1" }); // Or handle unmatched requests differently
+});
+
 app.use("/admin", admin);
 app.use("/", public);
 app.use("/user", user);
+app.all("*", (req, res) => {
+  res.json({ code: "U1" }); // Or handle unmatched requests differently
+});
 
 /** App listening on port */
 app.listen(parseInt(process.env.PORT), () => {

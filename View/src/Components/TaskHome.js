@@ -151,6 +151,23 @@ function TaskHome() {
     }
   };
 
+  function toLowerCaseWithoutBuiltin(str) {
+    const lowerCaseAlphabet = "abcdefghijklmnopqrstuvwxyz";
+    const upperCaseAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let result = "";
+
+    for (let char of str) {
+      const charIndex = upperCaseAlphabet.indexOf(char);
+      if (charIndex !== -1) {
+        result += lowerCaseAlphabet[charIndex];
+      } else {
+        result += char;
+      }
+    }
+
+    return result;
+  }
+
   useEffect(() => {
     fetchData();
   }, []);

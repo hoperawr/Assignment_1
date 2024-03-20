@@ -163,7 +163,9 @@ exports.getGroups = async (req, res, next) => {
     const getPlansQuery = `select * from tm_groups`;
     const response = await con.promise().query(getPlansQuery);
     res.json({ header: "Success", body: response[0] });
-  } catch (e) {}
+  } catch (e) {
+    console.log(e);
+  }
 };
 
 exports.getUserGroups = async (req, res, next) => {
